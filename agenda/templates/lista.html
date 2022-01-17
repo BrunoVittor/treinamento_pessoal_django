@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de contatos</title>
+</head>
+<body>
+<a href="{% url 'criar' %}">Criar contato</a>
+<ul>
+    {% for contato in contatos %}
+    <li>
+        Nome: {{ contato.nome }}<br>
+        Email: {{ contato.email }}<br>
+        Endereço: {{ contato.endereco }}<br>
+        Telefone: {{ contato.telefone }}<br>
+        <a href="{% url 'editar' pk=contato.id %}">Editar</a>
+        <a href="{% url 'deletar' pk=contato.id %}">Deletar</a>
+    </li>
+
+    <br>
+    {% endfor %}
+
+</ul>
+</body>
+</html>

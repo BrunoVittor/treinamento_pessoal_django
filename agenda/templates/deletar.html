@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} Agenda de contatos {% endblock %}
+
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    <p>Deletar o contato {{ contatos.nome }} ?</p>
+    <button type="submit">Deletar</button>
+</form>
+<a href="{% url 'contatos' %}">
+    <button type="submit">Voltar</button>
+</a>
+{% endblock %}
