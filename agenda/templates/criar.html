@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Criar contato</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Criar contatos{% endblock %}
+{% block content %}
 <form method="post">
     {% csrf_token %}
     Nome: {{ form.nome }}<br>
@@ -14,5 +13,4 @@
     <button type="submit">Salvar</button>
 </form>
 <a href="{% url 'contatos' %}"><button type="submit">Voltar</button></a>
-</body>
-</html>
+{% endblock %}

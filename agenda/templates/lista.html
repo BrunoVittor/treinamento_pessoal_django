@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Lista de contatos</title>
-</head>
-<body>
-<a href="{% url 'criar' %}">Criar contato</a>
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Lista de contatos{% endblock %}
+{% block content %}<a href="{% url 'criar' %}">Criar contato</a>
 <ul>
     {% for contato in contatos %}
     <li>
@@ -21,5 +19,4 @@
     {% endfor %}
 
 </ul>
-</body>
-</html>
+{% endblock %}
