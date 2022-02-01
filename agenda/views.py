@@ -8,7 +8,7 @@ from django.views.generic import TemplateView, ListView, CreateView, UpdateView,
 class IndexTemplateView(TemplateView):
   template_name = 'index.html'
 
-
+# +++++++++++++++++++++++++++++++++++++
 class AgendaListView(ListView):
   template_name = 'lista.html'
   model = Contatos
